@@ -4,7 +4,7 @@ import 'package:easy_hotel/app/core/values/app_strings.dart';
 import 'package:get/get.dart';
 
 import '../../data/model/restaurant/dto/response/item_response.dart';
-import '../../modules/food_cart/controllers/food_cart_controller.dart';
+import '../../modules/food/food_cart/controllers/food_cart_controller.dart';
 import '../../modules/resturant/controllers/resturant_controller.dart';
 import 'app_storage.dart';
 

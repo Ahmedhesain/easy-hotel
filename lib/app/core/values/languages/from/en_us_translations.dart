@@ -13,20 +13,18 @@ final Map<String, String> enUs = {
   AppStrings.goBack: 'back',
   AppStrings.notFound: 'not fount',
   AppStrings.noCarsFound: 'No Cars Found',
-
   AppStrings.noReview: 'No Reviews ',
-AppStrings.forbidden: 'forbidden',
+  AppStrings.forbidden: 'forbidden',
   AppStrings.unauthenticated: 'the session is expired',
   AppStrings.Welcome: 'WELCOME',
   AppStrings.phone: 'PHONE',
   AppStrings.email: 'EMAIL',
   AppStrings.password: 'PASSWORD',
   AppStrings.passwordConfirm: 'PASSWORD CONFIRM',
-  AppStrings.shouldSelectDelveryPlace:"Must Select Delivery place",
-
+  AppStrings.shouldSelectDelveryPlace: "Must Select Delivery place",
   AppStrings.userName: 'USERNAME',
-  AppStrings.forgetYourPassword : "Do You Forget Your Password ?",
-  AppStrings.resetPassword : "Reset Password",
+  AppStrings.forgetYourPassword: "Do You Forget Your Password ?",
+  AppStrings.resetPassword: "Reset Password",
   AppStrings.name: 'LASTNAME',
   AppStrings.register: 'REGISTER',
   AppStrings.haveAccount: 'Do you have an account',
@@ -95,13 +93,6 @@ AppStrings.forbidden: 'forbidden',
   AppStrings.send: 'Send',
   AppStrings.orderConfirmationText: 'Order Confirmation Text',
   AppStrings.confirmationText: 'Confirmation Text',
-
-
-
-
-
-
-
   AppStrings.description: 'Description',
   AppStrings.moreInformation: 'More information',
   AppStrings.relatedItems: 'Related items',
@@ -122,7 +113,8 @@ AppStrings.forbidden: 'forbidden',
   AppStrings.searchHotelForService: '"Search Hotel Or City..."',
   AppStrings.enterHotel: 'Enter Hotel',
   AppStrings.shouldSelectService: 'Must Select one Service At Least',
-  AppStrings.locationNotAvailable: "Location Information Not Available For this Service",
+  AppStrings.locationNotAvailable:
+      "Location Information Not Available For this Service",
   AppStrings.hallsSearchLabel: "Search For Halls and Reserve it..",
   AppStrings.capacity: "Capacity",
   AppStrings.person: "Person",
@@ -184,13 +176,17 @@ AppStrings.forbidden: 'forbidden',
   AppStrings.category: "Category",
   AppStrings.priceFrom: "From Price",
   AppStrings.priceTo: "To Price",
-
-  AppStrings.deliveryPlace:"Delivery Place",
-  AppStrings.minute:"minute",
-  AppStrings.reqTime:"Required Time",
-  AppStrings.addToCart:"added to cart successfully",
-  AppStrings.confirmCart:"Confirm",
-    AppStrings.noRoomsFound:"No Rooms Found",
-
-
+  AppStrings.deliveryPlace: "Delivery Place",
+  AppStrings.minute: "minute",
+  AppStrings.reqTime: "Required Time",
+  AppStrings.addToCart: "added to cart successfully",
+  AppStrings.confirmCart: "Confirm",
+  AppStrings.noRoomsFound: "No Rooms Found",
+  AppStrings.cancelorder: "cancel order",
+  AppStrings.saveReview: "Save Review",
+  AppStrings.editReview: "Edit Review",
+  AppStrings.orderStatue: "Order Statue",
+  AppStrings.underProccess: "Under Proccess",
+  AppStrings.notDeliverd: "Not Deliverd yet",
+  AppStrings.deliverd: "Deliverd",
 };

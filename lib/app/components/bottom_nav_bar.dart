@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '../core/values/app_strings.dart';
-import '../modules/food_cart/controllers/food_cart_controller.dart';
+import '../modules/food/food_cart/controllers/food_cart_controller.dart';
 import '../routes/app_pages.dart';
 
 class AppBottomNavBar extends GetView<FoodCartController> {

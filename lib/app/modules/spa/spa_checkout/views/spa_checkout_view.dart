@@ -307,7 +307,7 @@ class SpaCheckoutView extends GetView<SpaCheckoutController> {
                           label: AppStrings.email,
                           suffixIcon: Icons.email,
                           textInputAction: TextInputAction.next,
-                          validator: AppValidator.forceValue,
+                          // validator: AppValidator.forceValue,
                         ),
                         space,
                         TextFieldWidget(
@@ -315,6 +315,7 @@ class SpaCheckoutView extends GetView<SpaCheckoutController> {
                           label: AppStrings.phone,
                           suffixIcon: Icons.phone,
                           textInputAction: TextInputAction.next,
+                          textInputType: TextInputType.phone,
                           validator: AppValidator.forceValue,
                         ),
                       ],

@@ -58,13 +58,14 @@ class ContactUsView extends GetView<ContactUsController> {
         }
         return Container(
           margin: const EdgeInsets.all(10),
+          height: size.height,
           padding: const EdgeInsets.all(10),
-          child: Form(
-            key: controller.registerForm,
-            child: SingleChildScrollView(
-              physics: const AlwaysScrollableScrollPhysics(),
+          child: SingleChildScrollView(
+            physics: const AlwaysScrollableScrollPhysics(),
+            child: Form(
+              key: controller.registerForm,
               child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   // const TextWidget(
                   //   AppStrings.contactUs, size: 20, weight: FontWeight.bold,
@@ -93,8 +94,8 @@ class ContactUsView extends GetView<ContactUsController> {
 
                     validator: AppValidator.forceValue,
                   ),space,
-                  TextWidget(AppStrings.email,size: 15,weight: FontWeight.bold,),
-                  TextWidget(UserManager().user?.email ?? "",size: 20,weight: FontWeight.bold,),
+                  // TextWidget(AppStrings.email,size: 15,weight: FontWeight.bold,),
+                  // TextWidget(UserManager().user?.email ?? "",size: 20,weight: FontWeight.bold,),
 
 
 
@@ -102,7 +103,7 @@ class ContactUsView extends GetView<ContactUsController> {
                   space,
                   ButtonWidget(
                     text: AppStrings.send,
-                    onPressed:((controller.subjectController.text!="") && (controller.messageController.text!=""))? () {}:null,
+                    onPressed:() => controller.sendMessage(),
                     expanded: true,
                     fontColor: Colors.white,
                     fontSize: size.height * .026,

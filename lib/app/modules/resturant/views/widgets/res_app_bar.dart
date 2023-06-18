@@ -1,4 +1,4 @@
-import 'package:easy_hotel/app/modules/food_cart/controllers/food_cart_controller.dart';
+import 'package:easy_hotel/app/modules/food/food_cart/controllers/food_cart_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

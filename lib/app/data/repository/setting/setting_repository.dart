@@ -21,6 +21,7 @@ import 'package:easy_hotel/app/data/model/setting/dto/response/orders_response_d
 import 'package:easy_hotel/app/data/provider/api_provider.dart';
 
 import '../../model/auth/register/dto/response/all_cities_response.dart';
+import '../../model/setting/dto/request/cancle_request.dart';
 
 class SettingRepository {
 
@@ -156,6 +157,24 @@ class SettingRepository {
         onError: onError,
         convertor: OrdersResponse.fromJson,
         onComplete: onComplete
+    );
+  }
+
+  cancle(
+      CancleRequestDto request, {
+        SuccessFunc<void> onSuccess, Function()?onComplete,
+        Function(dynamic error)? onError,
+        // Function()? onComplete,
+      }) {
+    ApiProvider().post<void>(
+      'invOrganization/cancleorder',
+      data: request.toJson(),
+      onSuccess: onSuccess,
+      onComplete: onComplete,
+      onError: onError,
+      convertor: (_){return;},
+      // onComplete: onComplete
+
     );
   }
 }

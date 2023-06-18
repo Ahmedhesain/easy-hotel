@@ -2,18 +2,20 @@ import 'package:easy_hotel/app/components/text_widget.dart';
 import 'package:easy_hotel/app/core/utils/common.dart';
 import 'package:easy_hotel/app/core/values/app_constants.dart';
 import 'package:easy_hotel/app/core/values/app_strings.dart';
-import 'package:easy_hotel/app/modules/food_item/controllers/food_item_controller.dart';
-import 'package:easy_hotel/app/modules/food_item/views/widgets/addition_widget.dart';
-import 'package:easy_hotel/app/modules/food_item/views/widgets/app_bar.dart';
-import 'package:easy_hotel/app/modules/food_item/views/widgets/attribute_list_widget.dart';
-import 'package:easy_hotel/app/modules/food_item/views/widgets/bottom_widget.dart';
-import 'package:easy_hotel/app/modules/food_item/views/widgets/item_discription_widget.dart';
-import 'package:easy_hotel/app/modules/food_item/views/widgets/item_images_widget.dart';
-import 'package:easy_hotel/app/modules/food_item/views/widgets/reviews_widget.dart';
+import 'package:easy_hotel/app/modules/food/food_item/views/widgets/app_bar.dart';
+
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../../../components/bottom_nav_bar.dart';
+import '../../../../components/bottom_nav_bar.dart';
+import '../controllers/food_item_controller.dart';
+import 'widgets/addition_widget.dart';
+import 'widgets/attribute_list_widget.dart';
+import 'widgets/bottom_widget.dart';
+import 'widgets/item_discription_widget.dart';
+import 'widgets/item_images_widget.dart';
+import 'widgets/reviews_widget.dart';
+
 
 class FoodItemView extends GetView<FoodItemController> {
   const FoodItemView({Key? key}) : super(key: key);

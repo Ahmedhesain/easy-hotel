@@ -1,10 +1,10 @@
 
 
-import 'package:easy_hotel/app/modules/food_cart/controllers/food_cart_controller.dart';
+import 'package:easy_hotel/app/modules/food/food_cart/controllers/food_cart_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../../../../components/product_card_vertical_list.dart';
+import '../../../../../components/product_card_vertical_list.dart';
 
 class ItemListWidget extends GetView<FoodCartController> {
   const ItemListWidget({Key? key}) : super(key: key);

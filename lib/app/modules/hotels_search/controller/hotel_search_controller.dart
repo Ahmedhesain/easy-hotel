@@ -9,7 +9,7 @@ import 'package:get/get.dart';
 
 import '../../../data/model/spa/dto/response/spa_search_response_dto.dart';
 import '../../../data/model/spa/dto/request/spa_search_request_dto.dart';
-import '../../food_cart/controllers/food_cart_controller.dart';
+import '../../food/food_cart/controllers/food_cart_controller.dart';
 
 class HotelSearchController extends GetxController {
 

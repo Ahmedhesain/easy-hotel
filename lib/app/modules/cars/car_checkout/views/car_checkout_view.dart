@@ -360,7 +360,7 @@ class CarCheckoutView
                             label: AppStrings.email,
                             suffixIcon: Icons.email,
                             textInputAction: TextInputAction.next,
-                            validator: AppValidator.forceValue,
+                            // validator: AppValidator.forceValue,
                           ),
                           space,
                           TextFieldWidget(
@@ -371,8 +371,6 @@ class CarCheckoutView
                             textInputType: TextInputType.phone,                  
                             validator: AppValidator.forceValue,
                           ),
-
-
                         ],
                       ),
                     ),

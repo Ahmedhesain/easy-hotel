@@ -77,6 +77,7 @@ abstract class AppStrings {
   static const enterTime = "enterTime";
   static const ok = "ok";
   static const cancel = "cancel";
+  static const cancelorder = "cancel order";
   static const sections = "sections";
   static const LE = "LE";
   static const open = "Open";
@@ -142,6 +143,8 @@ abstract class AppStrings {
   static const cityRooms = "City Rooms";
   static const hotelRooms = "Hotel Rooms";
   static const stars = "Stars";
+    static const orderStatue = "Order Statue";
+
   static const roomDetail = "Room Detail";
   static const around = "Around you..";
   static const location = "Location";
@@ -204,7 +207,15 @@ abstract class AppStrings {
   static const reqTime = "requiredTime";
   static const addToCart= "add to cart successfully";
   static const confirmCart= "Confirm";
+  static const saveReview= "Save Review";
+  static const editReview= "Edit Review";
+  static const underProccess= "Under Proccess";
+  static const notDeliverd= "Not Deliverd yet";
+  static const deliverd= "Deliverd";
 
+
+  static const newOrder = "طلب جديد";
+  static const newOrderbody = "طلب جديد";
 
 
 

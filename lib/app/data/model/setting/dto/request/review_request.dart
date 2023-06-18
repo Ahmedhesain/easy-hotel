@@ -12,7 +12,7 @@ class ReviewRequestDto extends BaseRequest {
     this.rate,
     this.appId,
     this.detailId,
-
+    this.id
   });
 
   int? invOrganizationId;
@@ -24,22 +24,22 @@ class ReviewRequestDto extends BaseRequest {
   int? companyId;
   int? rate;
   int? appId;
+  int? id;
   int? detailId;
 
 
   @override
   Map<String, dynamic> toJson() => {
-    "invOrganizationId": invOrganizationId == null ? null : invOrganizationId,
-    "itemId": itemId == null ? null : itemId,
-    "reviewText": reviewText == null ? null : reviewText,
-    "reviewId": reviewId == null ? null : reviewId,
-    "createdBy": createdBy == null ? null : createdBy,
-    "branchId": branchId == null ? null : branchId,
-    "companyId": companyId == null ? null : companyId,
-    "rate": rate == null ? null : rate,
-    "appId": appId == null ? null : appId,
-    "detailId": detailId == null ? null : detailId,
-
-
+    "invOrganizationId": invOrganizationId,
+    "itemId": itemId,
+    "reviewText": reviewText,
+    "reviewId": reviewId,
+    "createdBy": createdBy,
+    "branchId": branchId,
+    "companyId": companyId,
+    "rate": rate,
+    "appId": appId,
+    "detailId": detailId,
+     "id": id ,
   };
 }

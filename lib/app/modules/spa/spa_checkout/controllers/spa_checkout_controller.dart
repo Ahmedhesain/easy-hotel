@@ -13,52 +13,54 @@ import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:get/get.dart';
 
 class SpaCheckoutController extends GetxController {
-  var nameController = TextEditingController(text: UserManager().user!.name ??"");
-  var userNameController = TextEditingController(text:UserManager().user!.name ??"");
-  var phoneController = TextEditingController(text: UserManager().user!.mobile ??"");
+  var nameController =
+      TextEditingController(text: UserManager().user!.name ?? "");
+  var userNameController =
+      TextEditingController(text: UserManager().user!.name ?? "");
+  var phoneController = TextEditingController(
+      text: UserManager().user!.mobile ?? UserManager().user!.phone ?? "");
   var remarkController = TextEditingController();
-  var emailController = TextEditingController(text:UserManager().user!.email ??"");
+  var emailController =
+      TextEditingController(text: UserManager().user!.email ?? "");
   final isLoading = false.obs;
-  final totalPrice = 0.0.obs ;
-
-
-
+  final totalPrice = 0.0.obs;
 
   final registerForm = GlobalKey<FormState>();
-  final List res =Get.arguments;
+  final List res = Get.arguments;
 
   getSpaSave() async {
-    if(res[1].toList().isEmpty){
-      showPopupText("يجب اختيار خدمة") ;
-      return ;
+    if (res[1].toList().isEmpty) {
+      showPopupText("يجب اختيار خدمة");
+      return;
     }
     isLoading(true);
     final request = SpaSaveRequest(
-      spaId:res[0] ,
-      // spaItemDTOList: res[1].toList(),
-      salesDetailSpaItemDTOList: [],
-      companyId: AppConstants.companyId,
-      createdBy: AppConstants.createdBy,
-      customerId: UserManager().user!.id,
-      branchId: res[2]??232,
-      phone: phoneController.text,
-      remarks:remarkController.text,
-      email: emailController.text,
-      name: nameController.text,
-      dueDate: res[11].toString().isNotEmpty ? res[11].toString().dateFromTimeString(res[10])  :res[10] ,
-      dueTime:res[11].toString().isNotEmpty ? res[11].toString().dateFromTimeString(res[10])  :res[10],
-      salesSpaList: res[9]
-    );
+        spaId: res[0],
+        // spaItemDTOList: res[1].toList(),
+        salesDetailSpaItemDTOList: [],
+        companyId: AppConstants.companyId,
+        createdBy: AppConstants.createdBy,
+        customerId: UserManager().user!.id,
+        branchId: res[2] ?? 232,
+        phone: phoneController.text,
+        remarks: remarkController.text,
+        email: emailController.text,
+        name: nameController.text,
+        dueDate: res[11].toString().isNotEmpty
+            ? res[11].toString().dateFromTimeString(res[10])
+            : res[10],
+        dueTime: res[11].toString().isNotEmpty
+            ? res[11].toString().dateFromTimeString(res[10])
+            : res[10],
+        salesSpaList: res[9]);
     SpaRepository().getSpaSave(request,
         onSuccess: (data) {
-          showPopupText( AppStrings.savedSuccessfully);
+          showPopupText(AppStrings.savedSuccessfully);
+          UserManager().sendNewOrderNotification(AppConstants.spa);
           Get.toNamed(Routes.ALLSERVICES);
           // res[1]([]);
         },
-        onError: (e) => showPopupText( e.toString()),
-        onComplete: () => isLoading(false)
-    );
+        onError: (e) => showPopupText(e.toString()),
+        onComplete: () => isLoading(false));
   }
-
-
 }

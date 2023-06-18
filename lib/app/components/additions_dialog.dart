@@ -2,7 +2,7 @@ import 'package:easy_hotel/app/components/button_widget.dart';
 import 'package:easy_hotel/app/components/text_widget.dart';
 import 'package:easy_hotel/app/core/values/app_constants.dart';
 import 'package:easy_hotel/app/core/values/app_strings.dart';
-import 'package:easy_hotel/app/modules/food_item/controllers/food_item_controller.dart';
+import 'package:easy_hotel/app/modules/food/food_item/controllers/food_item_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

@@ -319,7 +319,7 @@ class HouseKeepingCheckoutView
                             label: AppStrings.email,
                             suffixIcon: Icons.email,
                             textInputAction: TextInputAction.next,
-                            validator: AppValidator.forceValue,
+                            // validator: AppValidator.forceValue,
                           ),
                           space,
                           TextFieldWidget(
@@ -327,11 +327,9 @@ class HouseKeepingCheckoutView
                             label: AppStrings.phone,
                             suffixIcon: Icons.phone,
                             textInputAction: TextInputAction.next,
-
+                            textInputType: TextInputType.phone,
                             validator: AppValidator.forceValue,
                           ),
-
-
                         ],
                       ),
                     ),
@@ -363,12 +361,6 @@ class HouseKeepingCheckoutView
                       ),
                     ),
                   )
-
-
-
-
-
-
                 ],
               ),
             ),

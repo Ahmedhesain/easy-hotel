@@ -2,7 +2,7 @@ import 'package:easy_hotel/app/core/utils/user_manager.dart';
 import 'package:easy_hotel/app/routes/app_pages.dart';
 import 'package:get/get.dart';
 
-import '../../food_cart/controllers/food_cart_controller.dart';
+import '../../food/food_cart/controllers/food_cart_controller.dart';
 
 class SplashController extends GetxController {
   final showLogo = false.obs;

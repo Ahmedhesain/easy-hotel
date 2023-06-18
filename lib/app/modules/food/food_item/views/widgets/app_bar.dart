@@ -1,9 +1,8 @@
-import 'package:easy_hotel/app/modules/food_item/controllers/food_item_controller.dart';
+import '../../controllers/food_item_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-
-import '../../../../components/icon_button_widget.dart';
-import '../../../../core/utils/restaurant_strorage.dart';
+import '../../../../../components/icon_button_widget.dart';
+import '../../../../../core/utils/restaurant_strorage.dart';
 
 class ItemAppBar extends GetView<FoodItemController> with PreferredSizeWidget {
   const ItemAppBar({Key? key}) : super(key: key);

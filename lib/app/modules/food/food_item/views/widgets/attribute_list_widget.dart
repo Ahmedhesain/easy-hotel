@@ -1,11 +1,11 @@
-import 'package:easy_hotel/app/modules/food_item/controllers/food_item_controller.dart';
+import '../../controllers/food_item_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../../../../components/dropdown_widget.dart';
-import '../../../../components/text_widget.dart';
-import '../../../../core/values/app_strings.dart';
-import '../../../../data/model/restaurant/dto/response/attribute_details_model.dart';
+import '../../../../../components/dropdown_widget.dart';
+import '../../../../../components/text_widget.dart';
+import '../../../../../core/values/app_strings.dart';
+import '../../../../../data/model/restaurant/dto/response/attribute_details_model.dart';
 
 class AttributeListWidget extends GetView<FoodItemController> {
   const AttributeListWidget({Key? key}) : super(key: key);

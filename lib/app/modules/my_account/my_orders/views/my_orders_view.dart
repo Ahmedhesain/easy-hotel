@@ -58,20 +58,22 @@ class MyOrdersView extends GetView<MyOrdersController> {
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                for (int i = 0; i < controller.orders.length; i++)
+                for (var order in controller.orders)
                   OrderWidget(
-                      controller.orders[i].id!,
-                      controller.orders[i].appId!,
-                      controller.orders[i].branchId,
-                      controller.orders[i].itemId ?? 0,
-                      controller.orders[i].reviewId,
-                      controller.orders[i].cost ??  0,
-                      controller.orders[i].image ?? "",
-                      controller.orders[i].name ?? "",
-                      DateFormat('yyyy.MM.dd').format(
-                              controller.orders[i].date ?? DateTime.now()) ??
-                          "",
-                      controller.orders[i].rate ?? 0)
+                    appId:order.appId ,
+                    branchId: order.branchId,
+                    cancel: order.cancle,
+                    id: order.id,
+                    image: order.image,
+                    itemId: order.itemId,
+                    price: order.cost,
+                    rate: order.rate,
+                    reviewId: order.reviewId,
+                    statue: order.statue,
+                    subtitle: DateFormat('yyyy.MM.dd').format(
+                              order.date ?? DateTime.now()),
+                    title: order.name,
+                      )
               ],
             ),
           ),

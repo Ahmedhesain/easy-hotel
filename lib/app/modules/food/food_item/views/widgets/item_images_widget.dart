@@ -2,16 +2,16 @@ import 'package:carousel_slider/carousel_options.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:easy_hotel/app/core/utils/common.dart';
 import 'package:easy_hotel/app/data/provider/api_provider.dart';
-import 'package:easy_hotel/app/modules/food_item/controllers/food_item_controller.dart';
+import '../../controllers/food_item_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 import 'package:pinch_zoom/pinch_zoom.dart';
 
-import '../../../../components/icon_button_widget.dart';
-import '../../../../components/image_widget.dart';
-import '../../../../components/text_widget.dart';
-import '../../../../core/values/app_assets.dart';
+import '../../../../../components/icon_button_widget.dart';
+import '../../../../../components/image_widget.dart';
+import '../../../../../components/text_widget.dart';
+import '../../../../../core/values/app_assets.dart';
 
 class ItemImagesWidget extends GetView<FoodItemController> {
   const ItemImagesWidget({Key? key}) : super(key: key);

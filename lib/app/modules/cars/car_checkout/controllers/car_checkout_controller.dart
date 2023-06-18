@@ -13,6 +13,9 @@ import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:get/get.dart';
 import 'package:intl/intl.dart';
 
+import '../../../../data/model/user/dto/request/send_fcm_request.dart';
+import '../../../../data/repository/user/user_repository.dart';
+
 class CarCheckoutController extends GetxController {
   var nameController = TextEditingController(text: UserManager().user!.name ??"");
   var userNameController = TextEditingController(text:UserManager().user!.name ??"");
@@ -50,8 +53,8 @@ class CarCheckoutController extends GetxController {
     CarsRepository().saveCarsOrder(request,
         onError: (e) => showPopupText(e), onComplete: () => loading(false), onSuccess: (data) {
           showPopupText(AppStrings.savedSuccessfully);
+          UserManager().sendNewOrderNotification(AppConstants.cars);
           Get.toNamed(Routes.ALLSERVICES);
         } );
   }
-
 }

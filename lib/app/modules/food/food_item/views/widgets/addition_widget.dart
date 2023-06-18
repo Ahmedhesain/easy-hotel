@@ -1,12 +1,12 @@
 import 'package:easy_hotel/app/core/values/app_colors.dart';
-import 'package:easy_hotel/app/modules/food_item/controllers/food_item_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../../../../components/additions_dialog.dart';
-import '../../../../components/icon_button_widget.dart';
-import '../../../../components/text_widget.dart';
-import '../../../../core/values/app_strings.dart';
+import '../../../../../components/additions_dialog.dart';
+import '../../../../../components/icon_button_widget.dart';
+import '../../../../../components/text_widget.dart';
+import '../../../../../core/values/app_strings.dart';
+import '../../controllers/food_item_controller.dart';
 
 class AdditionWidget extends GetView<FoodItemController> {
   const AdditionWidget({Key? key}) : super(key: key);

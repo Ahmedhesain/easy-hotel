@@ -22,16 +22,15 @@ class MyAccountView extends GetView<MyAccountView> {
     var  space= Container(height: 2,width: size.width,color: AppColors.appGreyDark,);
 
     return Scaffold(
-            bottomNavigationBar: const AppBottomNavBar(index: 5),
+            // bottomNavigationBar: const AppBottomNavBar(index: 5),
       appBar: AppBar(
         elevation: 0,
-
-        // leading:
-        // GestureDetector(
-        //     onTap: (){
-        //       Get.back();
-        //     },
-        //     child: const Icon(Icons.arrow_back_ios)),
+        leading:
+        GestureDetector(
+            onTap: (){
+              Get.back();
+            },
+            child: const Icon(Icons.arrow_back_ios)),
         title:
         const TextWidget(
           AppStrings.myProfile, weight: FontWeight.bold, size: 25,),

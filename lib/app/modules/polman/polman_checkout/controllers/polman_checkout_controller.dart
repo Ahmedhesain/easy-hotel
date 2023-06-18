@@ -14,7 +14,7 @@ import 'package:get/get.dart';
 class PolmanCheckoutController extends GetxController {
   var nameController = TextEditingController(text: UserManager().user!.name ??"");
   var userNameController = TextEditingController(text:UserManager().user!.name ??"");
-  var phoneController = TextEditingController(text: UserManager().user!.mobile ??"");
+  var phoneController = TextEditingController(text: UserManager().user!.mobile ?? UserManager().user!.phone ??"");
   var emailController = TextEditingController(text:UserManager().user!.email ??"");
 
 
@@ -40,6 +40,7 @@ class PolmanCheckoutController extends GetxController {
     PolmanRepository().getPolmanSave(request,
         onSuccess: (data) {
           showPopupText(AppStrings.savedSuccessfully);
+          UserManager().sendNewOrderNotification(AppConstants.polman);
           Get.toNamed(Routes.ALLSERVICES);
         },
         onError: (e) => showPopupText( e.toString()),

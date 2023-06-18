@@ -7,7 +7,7 @@ import 'package:easy_hotel/app/data/model/restaurant/dto/response/sales_details_
 import 'package:easy_hotel/app/data/model/restaurant/dto/response/variation_model.dart';
 import 'package:get/get.dart';
 
-import '../../../../../modules/food_cart/controllers/food_cart_controller.dart';
+import '../../../../../modules/food/food_cart/controllers/food_cart_controller.dart';
 import '../../../spa/dto/response/spa_response_dto.dart';
 import 'attribute_details_model.dart';
 import 'attribute_model.dart';

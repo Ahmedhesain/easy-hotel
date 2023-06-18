@@ -6,7 +6,7 @@ import 'package:easy_hotel/app/core/values/app_constants.dart';
 import 'package:easy_hotel/app/core/values/app_strings.dart';
 import 'package:easy_hotel/app/data/model/restaurant/dto/response/item_mini_response.dart';
 import 'package:easy_hotel/app/data/model/restaurant/dto/response/item_response.dart';
-import 'package:easy_hotel/app/modules/food_cart/controllers/food_cart_controller.dart';
+import 'package:easy_hotel/app/modules/food/food_cart/controllers/food_cart_controller.dart';
 import 'package:easy_hotel/app/routes/app_pages.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';

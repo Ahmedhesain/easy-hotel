@@ -91,6 +91,7 @@ class HallCalenderPageController extends GetxController {
     HallsRepository().getHallSave(request,
         onSuccess: (data) {
           showPopupText(data.msg);
+          UserManager().sendNewOrderNotification(AppConstants.halls);
           Get.offNamed(Routes.HALLS , arguments: args[0].branchId);
         },
         onError: (e) => showPopupText(e.toString()),

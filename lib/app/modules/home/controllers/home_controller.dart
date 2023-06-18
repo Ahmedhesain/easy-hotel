@@ -8,7 +8,8 @@ import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:get/get.dart';
 import '../../../../main.dart';
 import '../../../core/utils/user_manager.dart';
-import '../../food_cart/controllers/food_cart_controller.dart';
+import '../../../core/values/app_constants.dart';
+import '../../food/food_cart/controllers/food_cart_controller.dart';
 import '../../rooms/rooms_homepage/views/rooms_view.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 
@@ -30,7 +31,7 @@ class HomeController extends GetxController {
     Get.isRegistered<FoodCartController>() ? Get.find<FoodCartController>() : Get.put<FoodCartController>(FoodCartController());
     final FirebaseMessaging firebaseMessaging = FirebaseMessaging.instance;
  
-      firebaseMessaging.subscribeToTopic("customers_${user.user!.id!}");
+      firebaseMessaging.subscribeToTopic("${AppConstants.customer}_${user.user!.id!}");
        WidgetsBinding.instance.addPostFrameCallback((_) async {
       RemoteMessage? initialMessage = await FirebaseMessaging.instance.getInitialMessage();
     });

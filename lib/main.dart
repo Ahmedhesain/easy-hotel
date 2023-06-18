@@ -3,9 +3,10 @@ import 'app.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:get/get.dart';
 
+import 'app/modules/food/food_cart/controllers/food_cart_controller.dart';
 final FlutterLocalNotificationsPlugin flutterLocalNotificationsPlugin = FlutterLocalNotificationsPlugin();
-
 Future<void> _firebaseMessagingBackgroundHandler(RemoteMessage message) async {}
 void main()async{
   WidgetsFlutterBinding.ensureInitialized();
@@ -16,7 +17,7 @@ void main()async{
       projectId: "easyhotel-76224"));
   FirebaseMessaging.onBackgroundMessage(_firebaseMessagingBackgroundHandler);
   await flutterLocalNotificationsPlugin.resolvePlatformSpecificImplementation<AndroidFlutterLocalNotificationsPlugin>()!.createNotificationChannel(channel);
-
+  Get.put<FoodCartController>(FoodCartController());
   runApp(const App());
 }
 

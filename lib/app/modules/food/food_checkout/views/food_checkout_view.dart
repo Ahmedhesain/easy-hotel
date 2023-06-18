@@ -505,7 +505,6 @@ class FoodCheckoutView extends GetView<FoodCheckoutController> {
                                 label: AppStrings.email,
                                 suffixIcon: Icons.email,
                                 textInputAction: TextInputAction.next,
-                                validator: AppValidator.forceValue,
                               ),
                               space,
                               TextFieldWidget(
@@ -515,7 +514,7 @@ class FoodCheckoutView extends GetView<FoodCheckoutController> {
                                 textInputAction: TextInputAction.next,
                                 justNumbers: true ,
                                 textInputType: TextInputType.phone,
-                              
+                            
                                 validator: AppValidator.forceValue,
                               ),
                             ],

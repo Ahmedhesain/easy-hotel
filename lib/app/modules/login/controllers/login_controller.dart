@@ -10,7 +10,7 @@ import 'package:easy_hotel/app/data/model/spa/dto/response/spa_search_response_d
     as spa;
 
 import '../../../core/utils/permission_handler.dart';
-import '../../food_cart/controllers/food_cart_controller.dart';
+import '../../food/food_cart/controllers/food_cart_controller.dart';
 
 class LoginController extends GetxController {
   var phoneController = TextEditingController();
