@@ -70,6 +70,7 @@ class ContactUsView extends GetView<ContactUsController> {
                   //   AppStrings.contactUs, size: 20, weight: FontWeight.bold,
                   // ),
                   // space,
+
                   TextFieldWidget(
                     controller: controller.subjectController,
                     hint:AppStrings.subject ,
